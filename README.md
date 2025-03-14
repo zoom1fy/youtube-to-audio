@@ -17,7 +17,7 @@ Installation
 **1. Clone the Repository**
 ```bash
 git clone https://github.com/ZoomCH02/youtube-to-audio.git
-cd youtube-audio-downloader
+cd youtube-to-audio
 ```
 
 **2. Set Up a Virtual Environment**
