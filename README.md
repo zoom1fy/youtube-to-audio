@@ -16,7 +16,7 @@ Installation
 ---
 **1. Clone the Repository**
 ```bash
-git clone https://github.com/yourusername/youtube-audio-downloader.git
+git clone https://github.com/ZoomCH02/youtube-to-audio.git
 cd youtube-audio-downloader
 ```
 
