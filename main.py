@@ -30,6 +30,8 @@ def choose_option(options, title):
             index += 1
         elif key == readchar.key.ENTER:
             return options[index]
+        elif key == readchar.key.ESC:  # Добавляем возможность выхода
+            return None
 
 def download_media(video_url, format_choice="mp3", output_folder="downloads"):
     """Скачивает аудио или видео с YouTube в указанном формате."""
