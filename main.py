@@ -5,7 +5,7 @@ import subprocess
 # Активация виртуального окружения (если не запущено)
 venv_path = os.path.join(os.path.dirname(__file__), "venv", "Scripts" if os.name == "nt" else "bin", "activate")
 if not getattr(sys, "base_prefix", sys.prefix) == sys.prefix and os.path.exists(venv_path):
-    os.system(f'"{venv_path}"')
+    subprocess.run([venv_path], shell=True, check=True)
 
 try:
     import readchar  # Локальная зависимость
