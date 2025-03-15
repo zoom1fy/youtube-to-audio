@@ -50,6 +50,16 @@ wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -O yt-dlp
 chmod +x yt-dlp
 ```
 
+**6. Download FFmpeg**
+FFmpeg is needed for processing audio and video. 
+### Windows
+1. [Download FFmpeg](https://ffmpeg.org/download.html)
+2. Add to `PATH`
+### Linux (Ubuntu/Debian)
+```sh
+sudo apt install ffmpeg
+```
+
 Usage
 ---
 Running the Program
