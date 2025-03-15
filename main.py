@@ -43,19 +43,22 @@ def download_media(video_url, format_choice="mp3", output_folder="downloads"):
 
     output_template = os.path.join(output_folder, "%(title)s.%(ext)s")
 
-    if format_choice == "mp4":
-        command = [yt_dlp_path, "-f", "bestvideo+bestaudio", "-o", output_template, video_url]
-    else:
-        command = [
-            yt_dlp_path,
-            "-f", "bestaudio",
-            "--extract-audio",
-            "--audio-format", format_choice,
-            "-o", output_template,
-            video_url
-        ]
+    try:
+        if format_choice == "mp4":
+            command = [yt_dlp_path, "-f", "bestvideo+bestaudio", "-o", output_template, video_url]
+        else:
+            command = [
+                yt_dlp_path,
+                "-f", "bestaudio",
+                "--extract-audio",
+                "--audio-format", format_choice,
+                "-o", output_template,
+                video_url
+            ]
 
-    subprocess.run(command)
+        subprocess.run(command, check=True)
+    except subprocess.CalledProcessError as e:
+        raise Exception(f"Ошибка при выполнении yt-dlp: {e}")
 
 if __name__ == "__main__":
     language = choose_option(["ru", "en"], "Выберите язык / Choose language:")
