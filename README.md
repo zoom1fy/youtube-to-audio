@@ -6,7 +6,7 @@ YouTube Audio Downloader is a Python-based command-line tool that allows users t
 
 Features
 ---
-- Interactive UI – Navigate menus using arrow keys to select language and format.
+- Interactive GUI – Navigate menus using arrow keys to select language and format.
 - Multiple Audio Formats – Supports MP3, WAV, and FLAC.
 - Fully Local Dependencies – No need for global installations; everything runs within the project folder.
 - Cross-Platform – Works on Windows, macOS, and Linux.
@@ -81,6 +81,7 @@ Dependencies
 - Python 3.8+
 - yt-dlp (locally downloaded)
 - readchar (for keyboard input handling)
+- tkinter (gui)
 
 Notes
 ---
